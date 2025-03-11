@@ -1,1 +1,1 @@
-oof
+UPDATE packages SET version='v0.60.3' WHERE rowid=3;
