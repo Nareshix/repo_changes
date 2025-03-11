@@ -1,1 +1,6 @@
-
+{
+    "1": [
+        "UPDATE packages SET version='v0.10.4' WHERE rowid=2;",
+        "UPDATE packages SET download_link='asd' WHERE rowid=3;"
+    ]
+}
