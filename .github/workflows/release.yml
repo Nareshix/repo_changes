@@ -1,0 +1,25 @@
+# on:
+#   schedule:
+#     - cron: "0 0 * * *"  # Runs daily at midnight UTC
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      # - uses: actions/checkout@v4
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: db-release-${{ github.run_number }}
+          name: Database Release (${{ github.run_number }})
+          files: data.db
+          generate_release_notes: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
