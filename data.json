@@ -8,5 +8,8 @@
     ],
     "3": [
         "UPDATE packages SET version='v0.60.3', download_link='https://github.com/junegunn/fzf/releases/download/v0.60.3/fzf-0.60.3-linux_amd64.tar.gz' WHERE rowid=3;"
+    ],
+    "4": [
+        "UPDATE packages SET version='1.98.2.25072', download_link='https://github.com/VSCodium/vscodium/releases/download/1.98.2.25072/codium_1.98.2.25072_amd64.deb' WHERE rowid=1;"
     ]
 }
